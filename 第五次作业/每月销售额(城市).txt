@@ -1,0 +1,6 @@
+SELECT
+	year, month, city, sum(price)
+FROM
+	("Order" LEFT	JOIN commodity ON "Order".category = commodity.category) as op
+GROUP BY op.city, op.year, op.month
+ORDER BY sum DESC

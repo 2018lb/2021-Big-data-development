@@ -1,0 +1,8 @@
+SELECT
+	registered_year, registered_month,count(*)
+FROM
+	customer
+GROUP BY
+	customer.registered_year, 
+	customer.registered_month
+	ORDER BY registered_year DESC,registered_month DESC
